@@ -3,6 +3,7 @@
   - Tello Edu
   - Tello Library (.NET standard 2.0)
   - Native protocol
+  - Swarm
 
 # IDE
   - Microsoft Visual Studio Community 2019
