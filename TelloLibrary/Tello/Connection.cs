@@ -5,11 +5,10 @@ using System.Net;
 using System.Net.Sockets;
 
 
-namespace TelloLibrary
+namespace TelloLibrary.Tello
 {
     class Connection
     {
-        private UdpClient _client;
         private IPEndPoint _endpoint;
         private string _ipAddress;
         private int _port;
@@ -17,12 +16,7 @@ namespace TelloLibrary
         {
             _ipAddress = ipAddress;
             _port = port;
-            _client = new UdpClient(port);
             _endpoint = new IPEndPoint(IPAddress.Parse(ipAddress), port);
-        }
-        public UdpClient getClient()
-        {
-            return _client;
         }
         public IPEndPoint getEndPoint()
         {

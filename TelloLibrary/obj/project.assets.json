@@ -187,11 +187,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lesh\\Desktop\\TelloProjects\\TelloProject\\TelloLibrary\\TelloLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\Lesh\\Desktop\\TelloProjects\\Git\\TelloProject\\TelloLibrary\\TelloLibrary.csproj",
       "projectName": "TelloLibrary",
-      "projectPath": "C:\\Users\\Lesh\\Desktop\\TelloProjects\\TelloProject\\TelloLibrary\\TelloLibrary.csproj",
+      "projectPath": "C:\\Users\\Lesh\\Desktop\\TelloProjects\\Git\\TelloProject\\TelloLibrary\\TelloLibrary.csproj",
       "packagesPath": "C:\\Users\\Lesh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lesh\\Desktop\\TelloProjects\\TelloProject\\TelloLibrary\\obj\\",
+      "outputPath": "C:\\Users\\Lesh\\Desktop\\TelloProjects\\Git\\TelloProject\\TelloLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

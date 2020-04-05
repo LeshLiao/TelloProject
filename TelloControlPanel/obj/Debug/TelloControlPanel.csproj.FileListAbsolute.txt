@@ -22,3 +22,15 @@ C:\Users\Lesh\Desktop\TelloProjects\TelloProject\TelloControlPanel\obj\Debug\Tel
 C:\Users\Lesh\Desktop\TelloProjects\TelloProject\TelloControlPanel\obj\Debug\TelloControlPanel.csproj.CopyComplete
 C:\Users\Lesh\Desktop\TelloProjects\TelloProject\TelloControlPanel\obj\Debug\TelloControlPanel.exe
 C:\Users\Lesh\Desktop\TelloProjects\TelloProject\TelloControlPanel\obj\Debug\TelloControlPanel.pdb
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TelloControlPanel\obj\Debug\TelloControlPanel.Form1.resources
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TelloControlPanel\obj\Debug\TelloControlPanel.Properties.Resources.resources
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TelloControlPanel\obj\Debug\TelloControlPanel.csproj.GenerateResource.cache
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TelloControlPanel\bin\Debug\TelloControlPanel.exe.config
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TelloControlPanel\bin\Debug\TelloControlPanel.exe
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TelloControlPanel\bin\Debug\TelloControlPanel.pdb
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TelloControlPanel\bin\Debug\TelloLibrary.dll
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TelloControlPanel\bin\Debug\TelloLibrary.pdb
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TelloControlPanel\obj\Debug\TelloControlPanel.csprojAssemblyReference.cache
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TelloControlPanel\obj\Debug\TelloControlPanel.csproj.CopyComplete
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TelloControlPanel\obj\Debug\TelloControlPanel.exe
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TelloControlPanel\obj\Debug\TelloControlPanel.pdb

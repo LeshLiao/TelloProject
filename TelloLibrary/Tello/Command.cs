@@ -7,7 +7,7 @@ using System.Threading;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace TelloLibrary
+namespace TelloLibrary.Tello
 {
     class Command
     {
@@ -19,9 +19,9 @@ namespace TelloLibrary
         public float rx, ry, lx, ly, speed;
         public CancellationTokenSource cancelTokens;
 
-        public Command(Connection con)
+        public Command(Connection con, UdpClient client)
         {
-            _client = con.getClient();
+            _client = client;
             _endpoint = con.getEndPoint();
             rx = 0.0f;
             ry = 0.0f;
@@ -34,11 +34,11 @@ namespace TelloLibrary
         public bool Connect()
         {
             _client.Connect(_endpoint);
+            Thread.Sleep(300);
             byte[] connectPacket = Encoding.UTF8.GetBytes("conn_req:\x00\x00");
             connectPacket[connectPacket.Length - 2] = 0x96;
             connectPacket[connectPacket.Length - 1] = 0x17;
             _client.Send(connectPacket, connectPacket.Length);
-            //receiveAck();
             startTask();
             return true;
         }
@@ -69,20 +69,16 @@ namespace TelloLibrary
             setPacketCRCs(packet);
             _client.Send(packet,packet.Length);
         }
-
         private static byte[] createJoyPacket(float fRx, float fRy, float fLx, float fLy, float speed)
         {
-            //template joy packet.
             var packet = new byte[] { 0xcc, 0xb0, 0x00, 0x7f, 0x60, 0x50, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x12, 0x16, 0x01, 0x0e, 0x00, 0x25, 0x54 };
-
             short axis1 = (short)(660.0F * fRx + 1024.0F);//RightX center=1024 left =364 right =-364
             short axis2 = (short)(660.0F * fRy + 1024.0F);//RightY down =364 up =-364
             short axis3 = (short)(660.0F * fLy + 1024.0F);//LeftY down =364 up =-364
             short axis4 = (short)(660.0F * fLx + 1024.0F);//LeftX left =364 right =-364
             short axis5 = (short)(660.0F * speed + 1024.0F);//Speed. 
 
-            if (speed > 0.1f)
-                axis5 = 0x7fff;
+            if (speed > 0.1f) axis5 = 0x7fff;
 
             long packedAxis = ((long)axis1 & 0x7FF) | (((long)axis2 & 0x7FF) << 11) | ((0x7FF & (long)axis3) << 22) | ((0x7FF & (long)axis4) << 33) | ((long)axis5 << 44);
             packet[9] = ((byte)(int)(0xFF & packedAxis));
@@ -91,18 +87,13 @@ namespace TelloLibrary
             packet[12] = ((byte)(int)(packedAxis >> 24 & 0xFF));
             packet[13] = ((byte)(int)(packedAxis >> 32 & 0xFF));
             packet[14] = ((byte)(int)(packedAxis >> 40 & 0xFF));
-
-            //Add time info.		
             var now = DateTime.Now;
             packet[15] = (byte)now.Hour;
             packet[16] = (byte)now.Minute;
             packet[17] = (byte)now.Second;
             packet[18] = (byte)(now.Millisecond & 0xff);
             packet[19] = (byte)(now.Millisecond >> 8);
-
-            CRC.calcUCRC(packet, 4);//Not really needed.
-
-            //calc crc for packet. 
+            CRC.calcUCRC(packet, 4);
             CRC.calcCrc(packet, packet.Length);
 
             return packet;
@@ -115,10 +106,8 @@ namespace TelloLibrary
             _client.Send(packet,packet.Length);
         }
         public void setMaxHeight(int height)
-        {
-            //                                          crc    typ  cmdL  cmdH  seqL  seqH  heiL  heiH  crc   crc
+        {                                                      //crc    typ  cmdL  cmdH  seqL  seqH  heiL  heiH  crc   crc
             var packet = new byte[] { 0xcc, 0x68, 0x00, 0x27, 0x68, 0x58, 0x00, 0x00, 0x00, 0x00, 0x00, 0x5b, 0xc5 };
-            //payload
             packet[9] = (byte)(height & 0xff);
             packet[10] = (byte)((height >> 8) & 0xff);
             setPacketSequence(packet);
@@ -141,15 +130,12 @@ namespace TelloLibrary
             CRC.calcUCRC(packet, 4);
             CRC.calcCrc(packet, packet.Length);
         }
-
         public void startTask()
         {
             cancelTask();
             Thread.Sleep(intervalTimeMilliseconds);
-
             queryAttAngle();
             setMaxHeight(50);
-
             cancelTokens = new CancellationTokenSource();
             Task.Factory.StartNew(async () =>
             {
@@ -157,14 +143,11 @@ namespace TelloLibrary
                 {
                     try
                     {
-                        if (cancelTokens.Token.IsCancellationRequested) 
-                            break;
+                        if (cancelTokens.Token.IsCancellationRequested) break;
 
                         var packet = createJoyPacket(rx,ry, lx, ly, speed);
                         _client.Send(packet, packet.Length);
-
                         //requestIframe(); //request video
-
                         Thread.Sleep(intervalTimeMilliseconds);
                     }
                     catch (Exception ex)

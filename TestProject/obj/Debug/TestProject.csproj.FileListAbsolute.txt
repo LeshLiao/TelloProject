@@ -6,3 +6,12 @@ C:\Users\Lesh\Desktop\TelloProjects\TelloProject\TestProject\obj\Debug\TestProje
 C:\Users\Lesh\Desktop\TelloProjects\TelloProject\TestProject\obj\Debug\TestProject.csproj.GenerateResource.cache
 C:\Users\Lesh\Desktop\TelloProjects\TelloProject\TestProject\obj\Debug\TestProject.exe
 C:\Users\Lesh\Desktop\TelloProjects\TelloProject\TestProject\obj\Debug\TestProject.pdb
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TestProject\bin\Debug\TestProject.exe.config
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TestProject\bin\Debug\TestProject.exe
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TestProject\bin\Debug\TestProject.pdb
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TestProject\obj\Debug\TestProject.Form1.resources
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TestProject\obj\Debug\TestProject.Properties.Resources.resources
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TestProject\obj\Debug\TestProject.csproj.GenerateResource.cache
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TestProject\obj\Debug\TestProject.exe
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TestProject\obj\Debug\TestProject.pdb
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TestProject\obj\Debug\TestProject.csprojAssemblyReference.cache

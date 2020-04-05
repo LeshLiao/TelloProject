@@ -56,6 +56,24 @@ namespace TestProject
             }, cancelTokens.Token);
             
         }
+        public void task02()
+        {
+            var t = Task<int>.Run(() => {
+            // Just loop.
+            int max = 1000000;
+            int ctr = 0;
+            for (ctr = 0; ctr <= max; ctr++)
+            {
+                if (ctr == max / 2 && DateTime.Now.Hour <= 12)
+                {
+                    ctr++;
+                    break;
+                }
+            }
+            return ctr;
+            } );
+            Console.WriteLine("Finished {0:N0} iterations.", t.Result);
+        }
         public void cancelTask()
         {
             if(cancelTokens != null)
@@ -64,7 +82,8 @@ namespace TestProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            startTask("first");
+            //startTask("first");
+            task02();
         }
 
         private void button2_Click(object sender, EventArgs e)

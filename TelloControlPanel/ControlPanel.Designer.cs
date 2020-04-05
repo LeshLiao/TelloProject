@@ -1,6 +1,6 @@
 ﻿namespace TelloControlPanel
 {
-    partial class Form1
+    partial class ControlPanel
     {
         /// <summary>
         /// 設計工具所需的變數。
@@ -37,7 +37,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(46, 105);
+            this.button1.Location = new System.Drawing.Point(45, 93);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 34);
             this.button1.TabIndex = 0;
@@ -47,7 +47,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(182, 105);
+            this.button2.Location = new System.Drawing.Point(159, 93);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(91, 34);
             this.button2.TabIndex = 1;
@@ -57,7 +57,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(46, 39);
+            this.button7.Location = new System.Drawing.Point(45, 39);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(89, 31);
             this.button7.TabIndex = 6;
@@ -67,7 +67,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(182, 39);
+            this.button3.Location = new System.Drawing.Point(159, 39);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(91, 31);
             this.button3.TabIndex = 7;
@@ -78,7 +78,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(326, 47);
+            this.label1.Location = new System.Drawing.Point(290, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 15);
             this.label1.TabIndex = 9;
@@ -88,7 +88,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(499, 297);
+            this.ClientSize = new System.Drawing.Size(493, 271);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button7);
