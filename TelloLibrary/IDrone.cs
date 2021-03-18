@@ -15,10 +15,25 @@ namespace TelloLibrary
         void backKeyDown();
         void rightKeyDown();
         void leftKeyDown();
+
+        void upKeyDown();
+        void downKeyDown();
+
+
         void forwardKeyUp();
         void backKeyUp();
         void rightKeyUp();
         void leftKeyUp();
+
+        void upKeyUp();
+        void downKeyUp();
+
+        void turnLeftKeyDown();
+        void turnLeftKeyUp();
+        void turnRightKeyDown();
+        void turnRightKeyUp();
+
+        string getStatus();
 
     }
 }

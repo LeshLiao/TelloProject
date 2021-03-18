@@ -14,4 +14,3 @@ C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TestProject\obj\Debug\TestP
 C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TestProject\obj\Debug\TestProject.csproj.GenerateResource.cache
 C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TestProject\obj\Debug\TestProject.exe
 C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TestProject\obj\Debug\TestProject.pdb
-C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TestProject\obj\Debug\TestProject.csprojAssemblyReference.cache

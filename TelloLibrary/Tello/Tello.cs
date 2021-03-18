@@ -34,11 +34,10 @@ namespace TelloLibrary.Tello
             _listener.stopListensing();
             _command.cancelTask();
         }
-        public int getbatteryPercentage()
+        public string getStatus()
         {
-            return _listener.batteryPercentageValue;
+            return _connection.getIpAddress()+",Battery:" +_listener.getBattery();
         }
-
         public void takeOff()
         {
             _command.takeOff();
@@ -55,6 +54,15 @@ namespace TelloLibrary.Tello
         {
             _command.ry = -10.0f;
         }
+        public void upKeyDown()
+        {
+            _command.ly = 10.0f;
+        }
+        public void downKeyDown()
+        {
+            _command.ly = -10.0f;
+        }
+
         public void rightKeyDown()
         {
             _command.rx = 10.0f;
@@ -79,5 +87,32 @@ namespace TelloLibrary.Tello
         {
             _command.rx = 0.0f;
         }
+
+        public void upKeyUp()
+        {
+            _command.ly = 0.0f;
+        }
+        public void downKeyUp()
+        {
+            _command.ly = 0.0f;
+        }
+
+        public void turnRightKeyDown()
+        {
+            _command.lx = 10.0f;
+        }
+        public void turnRightKeyUp()
+        {
+            _command.lx = 0.0f;
+        }
+        public void turnLeftKeyDown()
+        {
+            _command.lx = -10.0f;
+        }
+        public void turnLeftKeyUp()
+        {
+            _command.lx = 0.0f;
+        }
+
     }
 }

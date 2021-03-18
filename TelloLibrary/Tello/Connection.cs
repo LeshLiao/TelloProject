@@ -22,6 +22,9 @@ namespace TelloLibrary.Tello
         {
             return _endpoint;
         }
-
+        public string getIpAddress()
+        {
+            return _ipAddress;
+        }
     }
 }

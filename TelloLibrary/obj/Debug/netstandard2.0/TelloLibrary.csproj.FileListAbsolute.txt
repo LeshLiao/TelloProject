@@ -14,7 +14,6 @@ C:\Users\Lesh\Desktop\TelloProjects\TelloProject\TelloLibrary\obj\Debug\netstand
 C:\Users\Lesh\Desktop\TelloProjects\TelloProject\TelloLibrary\obj\Debug\netstandard2.0\TelloLibrary.AssemblyInfo.cs
 C:\Users\Lesh\Desktop\TelloProjects\TelloProject\TelloLibrary\obj\Debug\netstandard2.0\TelloLibrary.dll
 C:\Users\Lesh\Desktop\TelloProjects\TelloProject\TelloLibrary\obj\Debug\netstandard2.0\TelloLibrary.pdb
-C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TelloLibrary\obj\Debug\netstandard2.0\TelloLibrary.csprojAssemblyReference.cache
 C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TelloLibrary\obj\Debug\netstandard2.0\TelloLibrary.AssemblyInfoInputs.cache
 C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TelloLibrary\obj\Debug\netstandard2.0\TelloLibrary.AssemblyInfo.cs
 C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TelloLibrary\bin\Debug\netstandard2.0\TelloLibrary.deps.json
@@ -22,3 +21,4 @@ C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TelloLibrary\bin\Debug\nets
 C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TelloLibrary\bin\Debug\netstandard2.0\TelloLibrary.pdb
 C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TelloLibrary\obj\Debug\netstandard2.0\TelloLibrary.dll
 C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TelloLibrary\obj\Debug\netstandard2.0\TelloLibrary.pdb
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\TelloLibrary\obj\Debug\netstandard2.0\TelloLibrary.csprojAssemblyReference.cache

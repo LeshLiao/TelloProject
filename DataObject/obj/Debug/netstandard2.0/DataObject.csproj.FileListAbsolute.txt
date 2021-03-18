@@ -1,0 +1,8 @@
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\DataObject\bin\Debug\netstandard2.0\DataObject.deps.json
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\DataObject\bin\Debug\netstandard2.0\DataObject.dll
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\DataObject\bin\Debug\netstandard2.0\DataObject.pdb
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\DataObject\obj\Debug\netstandard2.0\DataObject.csprojAssemblyReference.cache
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\DataObject\obj\Debug\netstandard2.0\DataObject.AssemblyInfoInputs.cache
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\DataObject\obj\Debug\netstandard2.0\DataObject.AssemblyInfo.cs
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\DataObject\obj\Debug\netstandard2.0\DataObject.dll
+C:\Users\Lesh\Desktop\TelloProjects\Git\TelloProject\DataObject\obj\Debug\netstandard2.0\DataObject.pdb

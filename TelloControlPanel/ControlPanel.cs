@@ -5,6 +5,8 @@ using System.Windows.Forms;
 using TelloLibrary;
 using TelloLibrary.Tello;
 
+using System.Collections.Generic;
+
 namespace TelloControlPanel
 {
     public partial class ControlPanel : Form
@@ -18,13 +20,13 @@ namespace TelloControlPanel
         private void Form1_Load(object sender, EventArgs e)
         {
             mySwarm = new Swarm();
-            mySwarm.addDrone(new Tello("192.168.0.183", 8889,9000));
-            mySwarm.addDrone(new Tello("192.168.10.1" , 8889,9001));
+            //mySwarm.addDrone(new Tello("192.168.1.183", 8889,9000));
+            mySwarm.addDrone(new Tello("192.168.10.1" , 8889,9001)); //nb to tello 01
         }
         private void button7_Click(object sender, EventArgs e)
         {
             mySwarm.connect();
-            updateDroneStatus();
+            UpdateDroneStatus();
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -48,6 +50,14 @@ namespace TelloControlPanel
             {
                 mySwarm.backKeyDown();
             }
+            else if (e.KeyCode == Keys.W)
+            {
+                mySwarm.upKeyDown();
+            }
+            else if (e.KeyCode == Keys.S)
+            {
+                mySwarm.downKeyDown();
+            }
             else if (e.KeyCode == Keys.NumPad4)
             {
                 mySwarm.leftKeyDown();
@@ -55,6 +65,14 @@ namespace TelloControlPanel
             else if (e.KeyCode == Keys.NumPad6)
             {
                 mySwarm.rightKeyDown();
+            }
+            else if (e.KeyCode == Keys.D)
+            {
+                mySwarm.turnRightKeyDown();
+            }
+            else if (e.KeyCode == Keys.A)
+            {
+                mySwarm.turnLeftKeyDown();
             }
             else if (e.KeyCode == Keys.Add || e.KeyCode == Keys.T)
             {
@@ -76,6 +94,14 @@ namespace TelloControlPanel
             {
                 mySwarm.backKeyUp();
             }
+            else if (e.KeyCode == Keys.W)
+            {
+                mySwarm.upKeyUp();
+            }
+            else if (e.KeyCode == Keys.S)
+            {
+                mySwarm.downKeyUp();
+            }
             else if (e.KeyCode == Keys.NumPad4)
             {
                 mySwarm.leftKeyUp();
@@ -84,15 +110,28 @@ namespace TelloControlPanel
             {
                 mySwarm.rightKeyUp();
             }
+            else if (e.KeyCode == Keys.D)//right
+            {
+                mySwarm.turnRightKeyUp();
+            }
+            else if (e.KeyCode == Keys.A)
+            {
+                mySwarm.turnLeftKeyUp();
+            }
         }
-        public void updateDroneStatus()
+        public void UpdateDroneStatus()
         {
             CancellationTokenSource cancelTokens = new CancellationTokenSource();
             Task.Factory.StartNew(async () =>
             {
                 while (true)
                 {
-                    //setLabel1TextSafe("Battery:" + mySwarm.getbatteryPercentage().ToString());
+                    string msg = "";
+                    foreach (var status in mySwarm.getStatus())
+                    {
+                        msg = msg + status + "\r\n";
+                    }
+                    setLabel1TextSafe(msg);
                     Thread.Sleep(1000);
                 }
             }, cancelTokens.Token);

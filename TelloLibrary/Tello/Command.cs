@@ -42,18 +42,6 @@ namespace TelloLibrary.Tello
             startTask();
             return true;
         }
-        public async void receiveAck()
-        {
-            var result = await _client.ReceiveAsync();
-            bytes = result.Buffer.ToArray();
-            string Message = Encoding.ASCII.GetString(result.Buffer, 0, result.Buffer.Length);
-            if (Message.StartsWith("conn_ack"))
-            {
-                Console.WriteLine("receive:conn_ack");
-                queryAttAngle();
-                setMaxHeight(50);
-            }
-        }
         public void takeOff()
         {
             var packet = new byte[] { 0xcc, 0x58, 0x00, 0x7c, 0x68, 0x54, 0x00, 0xe4, 0x01, 0xc2, 0x16 };
