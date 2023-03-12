@@ -20,8 +20,8 @@ namespace TelloControlPanel
         private void Form1_Load(object sender, EventArgs e)
         {
             mySwarm = new Swarm();
-            //mySwarm.addDrone(new Tello("192.168.1.183", 8889,9000));
-            mySwarm.addDrone(new Tello("192.168.10.1" , 8889,9001)); //nb to tello 01
+            mySwarm.addDrone(new Tello("192.168.1.162", 8889,9000));
+            //mySwarm.addDrone(new Tello("192.168.10.1" , 8889,9001)); //nb to tello 01
         }
         private void button7_Click(object sender, EventArgs e)
         {
