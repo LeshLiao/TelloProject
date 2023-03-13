@@ -3,17 +3,17 @@ using System.Net.Sockets;
 
 namespace TelloLibrary.Tello
 {
-    public class Tello : IDrone
+    public class Tello_v2_0 : IDrone
     {
         private Command _command;
         private Connection _connection;
         private Listener _listener;
         private UdpClient _client;
-        public Tello(string ipAddress,int port)
+        public Tello_v2_0(string ipAddress,int port)
         {
             _connection = new Connection(ipAddress,port);
         }
-        public Tello(string ipAddress, int port,int clientPort)
+        public Tello_v2_0(string ipAddress, int port,int clientPort)
         {
             _connection = new Connection(ipAddress, port);
             _client = new UdpClient(clientPort);
